@@ -22,7 +22,7 @@ Adicione 3 ou mais screenshots do projeto em funcionamento.
 
 ## Questões resolvidas
 
-- 
+- [1791. Find Center of Star Graph](Questoes/1791.py) (Easy)
 
 ## Entrega
 
