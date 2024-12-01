@@ -1,52 +1,57 @@
 from heapq import heapify, heappop, heappush
 
 class Graph:
-  def __init__(self, graph: dict = {}):
-    self.graph = graph  # A dictionary for the adjacency list
+    def __init__(self, graph: dict = {}, passingFees: list = []):
+      self.graph = graph  # A dictionary for the adjacency list
+      self.passingFees = passingFees  # Lista de passing fees para cada cidade
 
-  def add_edge(self, node1, node2, weight):
-    # Adiciona node1 ao grafo, se necessário
-    if node1 not in self.graph:
+    def add_edge(self, node1, node2, weight):
+      # Adiciona node1 ao grafo, se necessário
+      if node1 not in self.graph:
         self.graph[node1] = {}
-    # Adiciona node2 ao grafo, mesmo que não tenha arestas saindo dele
-    if node2 not in self.graph:
+      # Adiciona node2 ao grafo, mesmo que não tenha arestas saindo dele
+      if node2 not in self.graph:
         self.graph[node2] = {}
-    # Adiciona a aresta de node1 para node2
-    self.graph[node1][node2] = weight
+      # Adiciona a aresta de node1 para node2
+      self.graph[node1][node2] = weight
 
-  def add_edges_from_list(self, edges):
-    for edge in edges:
-      self.add_edge(edge[0], edge[1], edge[2]) 
+    def add_edges_from_list(self, edges):
+      for edge in edges:
+        self.add_edge(edge[0], edge[1], edge[2])
 
-  def shortest_distances(self, source: str):
-    # Initialize the values of all nodes with infinity
-    distances = {node: float("inf") for node in self.graph}
-    distances[source] = 0  # Set the source value to 0
+    def shortest_distances_by_fees(self, source: str):
+      # Inicializa as distâncias com infinito e o custo dos vértices com infinito
+      costs = {node: float("inf") for node in self.graph}
+      costs[source] = self.passingFees[source]  # O custo inicial é o custo do vértice de origem
 
-    # Initialize a priority queue
-    pq = [(0, source)]
-    heapify(pq)
+      # Inicializa os caminhos com listas vazias
+      paths = {node: [] for node in self.graph}
+      paths[source] = [source]
 
-    # Create a set to hold visited nodes
-    visited = set()
-    while pq:  # While the priority queue isn't empty
-      current_distance, current_node = heappop(
-          pq
-      )  # Get the node with the min distance
+      # Inicializa a fila de prioridade (min-heap) com o custo de origem
+      pq = [(self.passingFees[source], source)]  # (custo, nó)
+      heapify(pq)
 
-      if current_node in visited:
-          continue  # Skip already visited nodes
-      visited.add(current_node)  # Else, add the node to visited set
+      # Criar um conjunto para manter os nós visitados
+      visited = set()
 
-      for neighbor, weight in self.graph[current_node].items():
-        # Calculate the distance from current_node to the neighbor
-        tentative_distance = current_distance + weight
-        if tentative_distance < distances[neighbor]:
-          distances[neighbor] = tentative_distance
-          heappush(pq, (tentative_distance, neighbor))
+      while pq:
+          current_cost, current_node = heappop(pq)
 
-    return distances
+          if current_node in visited:
+              continue  # Pula nós já visitados
+          visited.add(current_node)
 
+          for neighbor in self.graph[current_node].keys():
+              # Cálculo do custo total (acumulado de passing fees)
+              tentative_cost = current_cost + self.passingFees[neighbor]
+
+              if tentative_cost < costs[neighbor]:
+                  costs[neighbor] = tentative_cost
+                  paths[neighbor] = paths[current_node] + [neighbor]
+                  heappush(pq, (tentative_cost, neighbor))
+
+      return costs, paths
 
 class Solution(object):
     def minCost(self, maxTime, edges, passingFees):
@@ -56,5 +61,4 @@ class Solution(object):
         :type passingFees: List[int]
         :rtype: int
         """
-        n = len(passingFees)
         #djikstra porém vai adicionar mais os valores dos vértices
