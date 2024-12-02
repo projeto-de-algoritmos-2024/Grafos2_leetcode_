@@ -27,10 +27,10 @@ Adicione 3 ou mais screenshots do projeto em funcionamento.
 - [1928. Minimum Cost to Reach Destination in Time](Questoes/1928.py) (Hard)
 - [133. Clone Graph](Questoes/133.py) (Medium)
   
+## Resultados
+
+- [2642 - Design Graph With Shortest Path Calculator](https://leetcode.com/problems/design-graph-with-shortest-path-calculator/description/) ![Resolução do Exercício 2642](Imagens/2642.png)
+- [133 - Clone Graph](https://leetcode.com/problems/clone-graph/description/) ![Resolução do Exercício 133](Imagens/133.png)
+
 ## Entrega
-
-- [2642](https://leetcode.com/problems/design-graph-with-shortest-path-calculator/description/) ![Resolução do Exercício 2642](Imagens/2642.png)
-- [133](https://leetcode.com/problems/clone-graph/description/) ![Resolução do Exercício 133](Imagens/133.png)
-
-
 
