@@ -26,6 +26,7 @@ Adicione 3 ou mais screenshots do projeto em funcionamento.
 - [2642. Design Graph With Shortest Path Calculator](Questoes/2642.py) (Hard)
 - [1928. Minimum Cost to Reach Destination in Time](Questoes/1928.py) (Hard)
 - [1. Two Sum](Questoes/1.py) (Easy)
+- [133. Clone Graph](Questoes/133.py) (Medium)
   
 ## Entrega
 
