@@ -3,7 +3,13 @@ class Solution:
         if not node:
             return None
         
-        clone = Node(node.val)
-        clone.neighbors = [self.cloneGraph(neighbor) for neighbor in node.neighbors]
+        visited = {}
         
-        return clone
+        def dfs(n):
+            if n not in visited:
+                visited[n] = Node(n.val)
+                for neighbor in n.neighbors:
+                    dfs(neighbor)
+        
+        dfs(node)
+        return visited[node]
