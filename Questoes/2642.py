@@ -10,16 +10,18 @@ class Graph:
         u, v, w = edge
         self.graph[u].append((v, w))
 
-    def dfs(self, node, target, visited, path):
-        if node == target:
-            return path
-        visited.add(node)
-        for neighbor, _ in self.graph[node]:
-            if neighbor not in visited:
-                new_path = self.dfs(neighbor, target, visited, path + [neighbor])
-                if new_path:
-                    return new_path
-        return []
+    def bfs(self, node1, node2):
+        visited = set()
+        queue = [(node1, 0)]  
+        while queue:
+            current, dist = queue.pop(0)
+            if current == node2:
+                return dist
+            visited.add(current)
+            for neighbor, weight in self.graph[current]:
+                if neighbor not in visited:
+                    queue.append((neighbor, dist + weight))
+        return -1
 
     def shortestPath(self, node1, node2):
-        return self.dfs(node1, node2, set(), [node1])
+        return self.bfs(node1, node2)
