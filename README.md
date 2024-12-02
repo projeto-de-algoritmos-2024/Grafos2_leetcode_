@@ -33,6 +33,10 @@ Adicione 3 ou mais screenshots do projeto em funcionamento.
 ![Resolução do Exercício 2642](Imagens/2642.png)
 - [133 - Clone Graph](https://leetcode.com/problems/clone-graph/description/)
 ![Resolução do Exercício 133](Imagens/133.png)
+- [1791 - Find Center of Star Graph](https://leetcode.com/problems/find-center-of-star-graph/description/)
+![Resolução do Exercício 1791](Imagens/1791.png)
+- [1928 - Minimum Cost to Reach Destination in Time](https://leetcode.com/problems/minimum-cost-to-reach-destination-in-time/description/)
+![Resolução do Exercício 1928](Imagens/1928.png)
 
 ## Entrega
 
