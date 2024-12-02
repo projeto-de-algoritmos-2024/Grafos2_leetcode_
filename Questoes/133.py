@@ -6,10 +6,15 @@ class Solution:
         visited = {}
         
         def dfs(n):
-            if n not in visited:
-                visited[n] = Node(n.val)
-                for neighbor in n.neighbors:
-                    dfs(neighbor)
+            if n in visited:
+                return visited[n]
+            
+            clone = Node(n.val)
+            visited[n] = clone
+            
+            for neighbor in n.neighbors:
+                clone.neighbors.append(dfs(neighbor))
+            
+            return clone
         
-        dfs(node)
-        return visited[node]
+        return dfs(node)
