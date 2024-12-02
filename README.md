@@ -24,7 +24,9 @@ Adicione 3 ou mais screenshots do projeto em funcionamento.
 
 - [1791. Find Center of Star Graph](Questoes/1791.py) (Easy)
 - [2642. Design Graph With Shortest Path Calculator](Questoes/2642.py) (Hard)
-
+- [1928. Minimum Cost to Reach Destination in Time](Questoes/1928.py) (Hard)
+- [1. Two Sum](Questoes/1.py) (Easy)
+  
 ## Entrega
 
 
