@@ -29,4 +29,7 @@ Adicione 3 ou mais screenshots do projeto em funcionamento.
   
 ## Entrega
 
+- 2642 ![Resolução do Exercício 2642](Imagens/2642.jpg)
+
+
 
