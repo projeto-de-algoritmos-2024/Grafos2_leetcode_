@@ -29,8 +29,8 @@ Adicione 3 ou mais screenshots do projeto em funcionamento.
   
 ## Resultados
 
-- [2642 - Design Graph With Shortest Path Calculator](https://leetcode.com/problems/design-graph-with-shortest-path-calculator/description/) ![Resolução do Exercício 2642](Imagens/2642.png)
-- [133 - Clone Graph](https://leetcode.com/problems/clone-graph/description/) ![Resolução do Exercício 133](Imagens/133.png)
+- [2642 - Design Graph With Shortest Path Calculator](https://leetcode.com/problems/design-graph-with-shortest-path-calculator/description/) ![Resolução do Exercício 2642](Imagens/2642.png)<br>
+- [133 - Clone Graph](https://leetcode.com/problems/clone-graph/description/) ![Resolução do Exercício 133](Imagens/133.png)<br>
 
 ## Entrega
 
