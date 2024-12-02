@@ -29,8 +29,8 @@ Adicione 3 ou mais screenshots do projeto em funcionamento.
   
 ## Entrega
 
-- 2642 ![Resolução do Exercício 2642](Imagens/2642.png)
-- 133 ![Resolução do Exercício 133](Imagens/133.png)
+- [2642](https://leetcode.com/problems/design-graph-with-shortest-path-calculator/description/) ![Resolução do Exercício 2642](Imagens/2642.png)
+- [133](https://leetcode.com/problems/clone-graph/description/) ![Resolução do Exercício 133](Imagens/133.png)
 
 
 
