@@ -40,4 +40,4 @@ Adicione 3 ou mais screenshots do projeto em funcionamento.
 
 ## Entrega
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/7Gm2WzREfgE?si=Q8IOYqOuGo2SYXgO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+[Vídeo de Entrega de Grafos 2](https://www.youtube.com/embed/7Gm2WzREfgE?si=Q8IOYqOuGo2SYXgO)
